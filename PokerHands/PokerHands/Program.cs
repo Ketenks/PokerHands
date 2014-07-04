@@ -24,7 +24,7 @@ namespace PokerHands
         static void Main(string[] args)
         {
           
-           RankHand("5H 5C 6S 7S KD");
+           RankHand(CreateHand());
 
             Console.ReadKey();
         }
@@ -32,14 +32,17 @@ namespace PokerHands
         
 
 
-        //function for correct input format
-        static void RankHand(string hand)
+        //function for correct input format and the rank
+        static string CreateHand()
         {
             //receive input from the user
             Console.WriteLine("RANKHAND\n");
             Console.WriteLine("Would you like to be dealt a hand from the deck\nOr would you like to set your own?\n\nYes or No");          
             string input = Console.ReadLine().ToLower();
             Console.WriteLine();
+
+            //here is the hand
+            string hand = string.Empty;
 
             //these manage how many times the user can put in incorrect format before the computer deals them a hand
             int autoDealN = 1;
@@ -144,10 +147,10 @@ namespace PokerHands
 
                         }
                     }
-                        //if all 5 cards were correct then do thisf
+                        //if all 5 cards were correct then do this
                     if (correct == 5)
                     {
-                        //its the correct format so stop the loop and let's get going
+                        //its the correct format so stop the loops and let's get going
                         checker++;
                         autoDealN++;
                                 
@@ -165,19 +168,27 @@ namespace PokerHands
                                 autoDeal = true;
                                 break;
                             }
-                            //ask them nicely to do it right
+                            //ask them nicely to do it right if they have another try
                             Console.WriteLine("Please set the cards you want following the correct format.\n");                           
                         }
                     }
                 }
          }//this bracket is the first while loop
+            return hand;   
+        }
 
-
+        //begin function to determine the rank of the hand
+        static void RankHand(string hand)
+        {
             
+
+
+
+
+
             //print output to the console
             Console.WriteLine("Hand: " + hand);
             Console.WriteLine("Rank: ");
-                 
         }
     }
 }
