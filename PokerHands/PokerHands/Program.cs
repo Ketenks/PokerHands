@@ -8,18 +8,18 @@ namespace PokerHands
 {
     class Program
     {
-        static int J = 11;
-        static int Q = 12;
-        static int K = 13;
-        static int A = 14;
-        static List<int> N = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A };
+        //static int J = 11;
+        //static int Q = 12;
+        //static int K = 13;
+        //static int A = 14;
+        //static List<int> N = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A };
         //static List<int> C = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A };
         //static List<int> D = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A };
         //static List<int> S = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A };
-        static string suit1 = "H";
-        static string suit2 = "C";
-        static string suit3 = "D";
-        static string suit4 = "S";
+        //static string suit1 = "H";
+        //static string suit2 = "C";
+        //static string suit3 = "D";
+        //static string suit4 = "S";
 
         static void Main(string[] args)
         {
@@ -116,6 +116,7 @@ namespace PokerHands
                         //this looks through each card to find the correct format
                         for (int j = 0; j < cardList[i].Length; j++)
                         {
+                            //a data type process
                             if ("0123456789".Contains(cardList[i][j]))
                             {
                                 stringNum += cardList[i][j];
