@@ -64,24 +64,43 @@ namespace PokerHands
                     //sets the properties of the card randomly
                     //adds the card into a list
                     Card randCard = new Card(null, null);
-                    randCard.RandCard();
-                    dealt.Add(randCard);
-
                     Card randCard1 = new Card(null, null);
-                    randCard1.RandCard();
-                    dealt.Add(randCard1);
-
                     Card randCard2 = new Card(null, null);
-                    randCard2.RandCard();
-                    dealt.Add(randCard2);
-
                     Card randCard3 = new Card(null, null);
-                    randCard3.RandCard();
-                    dealt.Add(randCard3);
-
                     Card randCard4 = new Card(null, null);
-                    randCard4.RandCard();
-                    dealt.Add(randCard4);
+
+                    bool looping = true;
+
+                    
+                        while (looping == true)
+                        {
+                            dealt.Clear();
+                            randCard.RandCard();
+                            dealt.Add(randCard);
+
+
+
+                            randCard1.RandCard();
+                            dealt.Add(randCard1);
+
+
+
+                            randCard2.RandCard();
+                            dealt.Add(randCard2);
+
+
+                            randCard3.RandCard();
+                            dealt.Add(randCard3);
+
+
+                            randCard4.RandCard();
+                            dealt.Add(randCard4);
+
+                             if(!(randCard.Equals(randCard1)) && !(randCard.Equals(randCard2)) && !(randCard.Equals(randCard3)) && !(randCard.Equals(randCard4)) && !(randCard1.Equals(randCard2)) && !(randCard1.Equals(randCard3)) && !(randCard1.Equals(randCard4)) && !(randCard2.Equals(randCard3)) && !(randCard2.Equals(randCard4)) && !(randCard3.Equals(randCard4)))
+                                {
+                                     looping = false;
+                                }
+                    }
 
                     //instantiate a new hand and put in the list of cards
                     Hand Hand = new Hand(dealt);

@@ -45,6 +45,7 @@ namespace PokerHands
                 ranks.Add(Drawn[3].Rank);
                 ranks.Add(Drawn[4].Rank);
 
+                //collect all the properties into a single string
                 cards = Drawn[0].Rank.ToString() + Drawn[0].Suit.ToString() + " " + Drawn[1].Rank.ToString() + Drawn[1].Suit.ToString() + " " + Drawn[2].Rank.ToString() + Drawn[2].Suit.ToString() + " " + Drawn[3].Rank.ToString() + Drawn[3].Suit.ToString() + " " + Drawn[4].Rank.ToString() + Drawn[4].Suit.ToString();
 
                 this.Suits = suits; this.Ranks = ranks; this.Cards = cards;
