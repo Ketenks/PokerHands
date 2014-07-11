@@ -27,6 +27,12 @@ namespace PokerHands
             {
                 Drawn.RemoveAt(5);
             }
+            //while (Drawn.Count < 5)
+            //{
+                
+            //    Drawn.Add(new Card(rand
+            //}
+
             //when the handsize is right
             //parse the properties of each card into a list
             if(Drawn.Count == 5)

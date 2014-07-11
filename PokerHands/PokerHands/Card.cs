@@ -24,6 +24,8 @@ namespace PokerHands
         //a method to randomly set the suit and rank
         public void RandCard()
         {
+            
+            System.Threading.Thread.Sleep(40);
             string suit = string.Empty;
             string rank = string.Empty;
             Random rNG = new Random();
